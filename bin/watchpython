@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+inotifywait --recursive --monitor --format "%e %w%f" --event move --includei '.*\.py$' . | while read changed; do echo $changed;pytest -s -v .; done
