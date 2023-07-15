@@ -1,4 +1,20 @@
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [tool.pytest.ini_options]
 addopts = [
     "--import-mode=importlib",
 ]
+
+[project]
+name = "ias_client"
+version = "1.0.0"
+authors = [
+    {name = "Your Name", email = "you@yourdomain.com"},
+]
+
+dependencies = [
+    "pyjwt",
+]
+
